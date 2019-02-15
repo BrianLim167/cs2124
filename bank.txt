@@ -1,0 +1,7 @@
+Account bob 42
+Account rushb 167
+Account yes 99
+
+Deposit 167 10
+Withdraw 167 8
+Withdraw 167 4
