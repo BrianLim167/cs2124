@@ -83,7 +83,6 @@ ostream& operator<<(ostream& os, const Warrior& warrior) {
 }
 
 
-
 int main() {
 
   const string INPUT_FILE = "warriors.txt";
@@ -92,7 +91,7 @@ int main() {
 }
 
 
-//execute a single command from the user input
+//execute the commands from the user input
 void run(const string& filename) {
 
   ifstream ifs(filename.c_str());
