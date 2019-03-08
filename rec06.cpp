@@ -57,14 +57,12 @@ public:
   size_t CAPACITY = 1;
   Directory() : size(0), capacity(CAPACITY), entries(new Entry*[CAPACITY]){}
   
-  Directory(const Directory& dir) {
+  Directory(const Directory& dir)
+    : size(dir.size), capacity(dir.capacity), entries(new Entry*[dir.capacity]) {
     cout << "copy" << endl;
-    entries = new Entry*[dir.capacity];
     for (size_t i = 0; i < dir.size; i++) {
       entries[i] = new Entry(*(dir.entries[i]));
     }
-    size = dir.size;
-    capacity = dir.capacity;
   }
 
   ~Directory() {
