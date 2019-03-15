@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+
+#ifndef STUDENT
+#define STUDETN
+#include "student.h"
+#endif
+
+class Student;
+
+class Course {
+  friend ostream& operator<<(ostream& os, const Course& rhs);
+public:
+  // Course methods needed by Registrar
+  Course(const string& courseName);
+  const string& getName() const;
+  bool addStudent(Student*);
+  void removeStudentsFromCourse(); 
+
+private:
+  string name;
+  vector<Student*> students;
+};
